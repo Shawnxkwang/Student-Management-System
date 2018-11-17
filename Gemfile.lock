@@ -127,6 +127,7 @@ DEPENDENCIES
   dm-migrations
   dm-postgres-adapter
   dm-sqlite-adapter
+  do_sqlite3
   pg
   sass
   sinatra
