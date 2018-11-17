@@ -5,6 +5,7 @@ require "dm-migrations"
 require 'dm-timestamps'
 
 DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/comments.db") if development?
+DataMapper.setup(:default, ENV['DATABASE_URL']) if production?
 
 
 # comments table

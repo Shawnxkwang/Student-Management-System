@@ -4,6 +4,8 @@ require "dm-core"
 require "dm-migrations"
 
 DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/student.db") if development?
+DataMapper.setup(:default, ENV['DATABASE_URL']) if production?
+
 # define class to represent student table
 class Students
   include DataMapper::Resource # mixin
