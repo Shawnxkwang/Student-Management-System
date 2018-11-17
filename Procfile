@@ -1,1 +1,1 @@
-web: bundle exec ruby app.rb -R config.ru -e $RACK_ENV -p $PORT
+web: bundle exec rackup -R config.ru -e $RACK_ENV -p $PORT
