@@ -1,5 +1,4 @@
 
-ruby '2.4.0'
 source :rubygems
 gem "sinatra"
 gem "slim"
