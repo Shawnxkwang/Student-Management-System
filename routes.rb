@@ -1,8 +1,12 @@
+require "dm-core"
+require "dm-migrations"
 # set configues
 set :username, "assignment2"
 set :password, "new"
 enable :sessions
 # set :environment, :development
+
+DataMapper.setup(:default, ENV['DATABASE_URL']) if production?
 
 # when route not found
 not_found do
