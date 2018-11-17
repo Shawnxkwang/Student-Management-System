@@ -1,0 +1,13 @@
+<h1>welcome to my home page</h1>
+<h1>
+    please use the following username and password to test
+    <br />
+    username: assignment2
+    <br />
+    password: new</h1>
+<%# This is just a comment %>
+<% if session[:admin] %>
+  <h1>You are logged in!</h1>
+<% else %>
+  <%= erb :form %>
+<% end %>

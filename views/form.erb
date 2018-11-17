@@ -1,0 +1,15 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Please logon</h1>
+    <h2 style="color:red;"><%= session[:validLogin] %></h2>
+    <form action="/login" method='post'>
+      <!-- login info-->
+      username: <input type='text' name='username'></input><br>
+      password: <input type='text' name='password'></input>
+      <br>
+      <input type='submit' name='submit'></input>
+      </form>
+      </body>
+  </html>

@@ -1,0 +1,57 @@
+
+<h1>Students</h1>
+
+<% if @allStudents.nil? %>
+  No students
+<% else %>
+  <div>
+    <div style="display: flex; margin: auto;">
+      <div style="margin: auto;">
+        ID
+      </div>
+      <div style="margin: auto;">
+        Firstname
+      </div>
+      <div style="margin: auto;">
+        Lastname
+      </div>
+      <div style="margin: auto;">
+        Student ID
+      </div>
+      <div style="margin: auto;">
+        Birthday
+      </div>
+      <div style="margin: auto;">
+        Address
+      </div>
+    </div>
+
+      <br />
+    <% for stu in @allStudents%>
+      <a href="/students/<%= stu.id %>">
+        <div style="display: flex; margin: auto;">
+          <div style="margin: auto;">
+            <%= stu.id %>
+          </div>
+          <div style="margin: auto;">
+            <%= stu.firstname %>
+          </div>
+          <div style="margin: auto;">
+            <%= stu.lastname %>
+          </div>
+          <div style="margin: auto;">
+            <%= stu.studentID %>
+          </div>
+          <div style="margin: auto;">
+            <%= stu.birthday %>
+          </div>
+          <div style="margin: auto;">
+            <%= stu.address %>
+          </div>
+        </div>
+      </a>
+    <% end %>
+  </div>
+<% end %>
+
+<a href="/createstudent"><button>Create New Student</button></a>

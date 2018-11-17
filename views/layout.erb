@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <title><%= @title || "Student Information System" %></title>
+  </head>
+  <body>
+    <div class="header">
+      <div>
+        <img src="/images/kids.png" alt="kids" width=100%>
+      </div>
+      <div>
+        <br />
+        <br />
+        <h1 class="title"> Student</h1>
+        <h1 class="title"> Information</h1>
+        <h1 class="title"> System </h1>
+      </div>
+    </div>
+
+    <ul class="nav_ul">
+      <li><a class="nav" href="/home"><b>Home</b></a></li>
+      <li><a class="nav" href="/about"><b>About</b></a></li>
+      <li><a class="nav" href="/contact"><b>Contact</b></a></li>
+      <li><a class="nav" href="/students"><b>Students</b></a></li>
+      <li><a class="nav" href="/comment"><b>Comment</b></a></li>
+      <li><a class="nav" href="/video"><b>Video</b></a></li>
+      <!-- login and log out-->
+      <% if session[:admin] %>
+        <li><a class="nav" href="/logout"><b>Logout</b></a></li>
+      <% else %>
+        <li><a class="nav" href="/login"><b>Login</b></a></li>
+      <% end %>
+    </ul>
+    <%= yield %>
+
+  </body>
+
+</html>

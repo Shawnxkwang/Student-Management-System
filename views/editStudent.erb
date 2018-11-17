@@ -1,0 +1,21 @@
+<h1>Edit Student</h1>
+<h1>Database ID: <%= session[:editID] %></h1>
+
+<h2 style="color:red;"><%= session[:validStudent] %></h2>
+
+<form action="/editstudent" method='post'>
+  <!-- create student-->
+  firstname: <input type='text' name='firstname' value=<%= @stud.firstname %>></input><br />
+  lastname: <input type='text' name='lastname' value=<%= @stud.lastname %>></input>
+  <br />
+  birthday(MM/DD/YYYY): <input type='text' name='birthday' value=<%= @stud.birthday %>></input>
+  <br />
+  address: <input type='text' name='address' value=<%= @stud.address %>></input>
+  <br />
+  Student ID: <input type='text' name='studentID' value=<%= @stud.studentID %>></input>
+  <br />
+  <br />
+  <input type='submit' name='submit' value="Update Student"></input>
+</form>
+
+<a href="/students"><button>Back to Students list</button></a>

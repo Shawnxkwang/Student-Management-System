@@ -1,0 +1,44 @@
+<h1>Comments</h1>
+
+<% if @allComments.nil? %>
+  No students
+<% else %>
+  <div>
+    <div style="display: flex; margin: auto;">
+      <div style="margin: auto;">
+        ID
+      </div>
+      <div style="margin: auto;">
+        Title
+      </div>
+      <div style="margin: auto;">
+        Name
+      </div>
+      <div style="margin: auto;">
+        Timestamp
+      </div>
+    </div>
+
+      <br />
+    <% for comm in @allComments%>
+    <a href="/comment/<%= comm.id %>">
+      <div style="display: flex; margin: auto;">
+        <div style="margin: auto;">
+          <%= comm.id %>
+        </div>
+        <div style="margin: auto;">
+          <%= comm.title %>
+        </div>
+        <div style="margin: auto;">
+          <%= comm.name %>
+        </div>
+        <div style="margin: auto;">
+          <%= comm.created_at %>
+        </div>
+      </div>
+    </a>
+    <% end %>
+  </div>
+<% end %>
+
+<a href="/createcomment"><button>Create New Comment</button></a>

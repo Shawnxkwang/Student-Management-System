@@ -1,0 +1,35 @@
+<h1>Student Database ID: <%= @stud.id%></h1>
+<h1>Student ID: <%= @stud.studentID%></h1>
+
+<ul >
+  <li style="margin: auto;">
+    Firstname:&nbsp; &nbsp; <%= @stud.firstname%>
+  </li>
+  <br />
+  <li style="margin: auto;">
+    Lastname:&nbsp; &nbsp; <%= @stud.lastname %>
+  </li>
+  <br />
+  <li style="margin: auto;">
+    Student ID:&nbsp; &nbsp; <%= @stud.studentID %>
+  </li>
+  <br />
+  <li style="margin: auto;">
+    Birthday:&nbsp; &nbsp; <%= @stud.birthday %>
+  </li>
+  <br />
+  <li style="margin: auto;">
+    Address:&nbsp; &nbsp; <%= @stud.address %>
+  </li>
+  <br />
+</ul>
+
+<a href="/students" ><button>Go back to student list</button></a>
+<br />
+<br />
+<form method="post" action="/students/edit/<%= @stud.id %>">
+  <input class='btn btn-primary' type='submit' value='Edit Student'>
+</form>
+<form method="post" action="/students/delete/<%= @stud.id %>">
+  <input class='btn btn-primary' type='submit' value='Delete Student'>
+</form>

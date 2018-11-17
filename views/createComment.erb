@@ -1,0 +1,15 @@
+<h1>Create Comment</h1>
+<h2 style="color:red;"><%= session[:validComment] %></h2>
+
+<form action="/createcomment" method='post'>
+  <!-- create student-->
+  title: <input type='text' name='title'></input><br />
+  author name: <input type='text' name='name'></input>
+  <br />
+  content: <input type='text' name='content'></input>
+  <br />
+  <br />
+  <input type='submit' name='submit'></input>
+</form>
+
+<a href="/comment"><button>Back to comments list</button></a>

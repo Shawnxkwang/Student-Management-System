@@ -1,0 +1,20 @@
+<h1>Create Student</h1>
+
+<h2 style="color:red;"><%= session[:validStudent] %></h2>
+
+<form action="/createstudent" method='post'>
+  <!-- create student-->
+  firstname: <input type='text' name='firstname'></input><br />
+  lastname: <input type='text' name='lastname'></input>
+  <br />
+  birthday(MM/DD/YYYY): <input type='text' name='birthday'></input>
+  <br />
+  address: <input type='text' name='address'></input>
+  <br />
+  Student ID: <input type='text' name='studentID'></input>
+  <br />
+  <br />
+  <input type='submit' name='submit'></input>
+</form>
+
+<a href="/students"><button>Back to Students list</button></a>

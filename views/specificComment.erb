@@ -1,0 +1,21 @@
+<h1>Comment ID: <%= @cmt.id%></h1>
+
+<ul >
+  <li style="margin: auto;">
+    Title:&nbsp; &nbsp; <%= @cmt.title%>
+  </li>
+  <br />
+  <li style="margin: auto;">
+    Author Name:&nbsp; &nbsp; <%= @cmt.name %>
+  </li>
+  <br />
+  <li style="margin: auto;">
+    Created Time:&nbsp; &nbsp; <%= @cmt.created_at %>
+  </li>
+  <br />
+  <li style="margin: auto;">
+    Comment Content:&nbsp; &nbsp; <%= @cmt.content %>
+  </li>
+  <br />
+</ul>
+<a href="/comment"><button>Back to comments list</button></a>
