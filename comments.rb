@@ -19,5 +19,4 @@ end
 # handle sqlite queries
 
 DataMapper.finalize
-DataMapper.auto_migrate!
 DataMapper.auto_upgrade!
