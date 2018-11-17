@@ -2,7 +2,9 @@
 #require 'data_mapper'
 require "dm-core"
 require "dm-migrations"
-DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/student.db")
+
+DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/student.db") if development?
+DataMapper.setup(:default,"postgres://root:secretpass@127.0.0.1/student") if production?
 # define class to represent student table
 class Students
   include DataMapper::Resource # mixin

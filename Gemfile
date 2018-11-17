@@ -9,6 +9,5 @@ gem "thin"
 gem "sinatra-contrib"
 gem "data_mapper"
 gem "pg", :group => :production
-gem "do_sqlite3"
 gem "dm-postgres-adapter", :group => :production
-gem "dm-sqlite-adapter"
+gem "dm-sqlite-adapter", :group => :development
